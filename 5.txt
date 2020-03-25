@@ -1,0 +1,104 @@
+// 1-1
+table = new SimpleTable("baby-2010.csv");
+for (row: table) {
+  if (row.getField('name').startsWith('X') || row.getField('name').startsWith('Y')) {
+    print(row);
+  }
+}
+
+// 1-2
+table = new SimpleTable("baby-2010.csv");
+for (row: table) {
+  if (row.getField('name').startsWith('B') && row.getField('name').endsWith('a')) {
+    print(row);
+  }
+}
+
+// 1-3
+table = new SimpleTable("baby-2010.csv");
+for (row: table) {
+  if (row.getField('name').endsWith('i') && row.getField('gender') == 'boy') {
+    print(row);
+  }
+}
+
+// 1-4
+table = new SimpleTable("baby-2010.csv");
+count = 0;
+for (row: table) {
+  if (row.getField('name').startsWith('O')) {
+    count++;
+  }
+}
+print('count: ' + count);
+
+// 1-5
+table = new SimpleTable("baby-2010.csv");
+count = 0;
+for (row: table) {
+  if (row.getField('name').startsWith('T') && row.getField('gender') == 'girl') {
+    count++;
+  }
+}
+print('count: ' + count);
+
+// 1-6
+table = new SimpleTable("baby-2010.csv");
+count = 0;
+for (row: table) {
+  if (row.getField("name").endsWith("d") && row.getField('gender') == 'boy') {
+    count++;
+  }
+}
+print('count: ' + count)
+
+// 1-7
+table = new SimpleTable("baby-2010.csv");
+count1 = 0;
+count2 = 0;
+for (row: table) {
+  if (row.getField("name").startsWith("A")) {
+    count1++;
+  }
+  if (row.getField('name').startsWith("B")) {
+    count2++;
+  }
+}
+
+print('count1: ' + count1)
+print('count2: ' + count2)
+
+// 1-8
+table = new SimpleTable("survey-2012.csv");
+table.convertToLowerCase();
+count1 = 0;
+count2 = 0;
+for (row: table) {
+  if (row.getField('color') == 'red') {
+    count1++;
+  }
+  if (row.getField('color') == 'blue') {
+    count2++;
+  }
+}
+
+print('red: ' + count1);
+print('blue: ' + count2);
+
+// 1-9
+table = new SimpleTable("survey-2012.csv");
+table.convertToLowerCase();
+count1 = 0;
+count2 = 0;
+for (row: table) {
+  if (row.getField('soda') == 'coke') {
+    if (row.getField('color') == 'red') {
+      count1++;
+    }
+    if (row.getField('color') == 'blue') {
+      count2++;
+    }
+  }
+}
+print('red: ', count1);
+print('blue: ', count2);

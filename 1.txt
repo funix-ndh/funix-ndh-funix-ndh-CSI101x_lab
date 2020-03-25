@@ -1,0 +1,44 @@
+// 1-1
+print(1, 2, "hello");
+
+// 1-2
+print(1);
+print(1, 2);
+print(1, 2, 3);
+
+// 1-3
+x = "xyz123";
+print(x);
+print(x, x);
+print(x, x, x);
+
+// 1-4
+image = new SimpleImage("x.png");
+image.setZoom(20);
+pixel = image.getPixel(0, 0);
+pixel.setRed(0);
+pixel.setGreen(0);
+pixel.setBlue(255);
+
+print(image);
+
+// 1-5
+image = new SimpleImage("x.png");
+image.setZoom(20);
+pixel = image.getPixel(0, 0);
+pixel.setRed(255);
+pixel.setBlue(255);
+pixel.setGreen(0);
+
+print(image);
+
+// 1-6
+image = new SimpleImage("x.png");
+image.setZoom(20);
+pixel = image.getPixel(1, 0);
+pixel.setRed(255);
+pixel.setBlue(0);
+pixel.setGreen(0);
+
+print(image);
+
